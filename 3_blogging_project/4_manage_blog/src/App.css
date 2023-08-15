@@ -36,3 +36,15 @@
     transform: rotate(360deg);
   }
 }
+/* ------------------------------ Added CSS ------------------------------------- */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 18px;
+}
+
+#page-body {
+  text-align: left;
+  max-width: 700px;
+  margin: auto;
+  padding-top: 64px;
+}
