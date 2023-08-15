@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
-
+import './App.css'
+import 'bootstrap/dist/css/bootstrap.css'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import HomePage from './pages/HomePage/HomePage.jsx'
+import ArticlePage from './pages/ArticlePage/ArticlePage.jsx'
+import ArticlesListPage from './pages/ArticlesListPage/ArticlesListPage.jsx'
+import AboutPage from './pages/AboutPage/AboutPage.jsx'
+import NavBar from './pages/NavBar/NavBar.jsx'
+import NotFoundPage from './pages/NotFoundPage/NotFoundPage.jsx'
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    // jsx
+    <BrowserRouter>
+      <div className="App">
+        <NavBar />
+        {/* <NavBar /> */}
+        <div id="page-body">
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/articles" element={<ArticlesListPage />} />
+            <Route path="/articles/:articleId" element={<ArticlePage />} />
+            <Route path="*" element={<NotFoundPage />} />
+          </Routes>
+        </div>
+      </div>
+    </BrowserRouter>
+  )
 }
 
-export default App;
+export default App
