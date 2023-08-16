@@ -4,13 +4,13 @@ import { Link } from 'react-router-dom'
 const NavBar = (props) => {
   return (
     <nav
-      className="navbar navbar-expand-lg bg-body-tertiary"
-      data-bs-theme="dark"
+      className="navbar navbar-expand-lg navbar-dark bg-primary"
+      style={{ backgroundColor: '#0074D9' }}
     >
       <div className="container-fluid">
-        <a className="navbar-brand" href="#">
-          Navbar
-        </a>
+        <Link className="navbar-brand" to="/">
+          My Awesome Website
+        </Link>
         <button
           className="navbar-toggler"
           type="button"
@@ -25,25 +25,21 @@ const NavBar = (props) => {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <Link className="nav-link active" aria-current="page" to="/">
+              <Link className="nav-link" to="/">
                 Home
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link active" aria-current="page" to="/about">
+              <Link className="nav-link" to="/about">
                 About
               </Link>
             </li>
             <li className="nav-item">
-              <Link
-                className="nav-link active"
-                aria-current="page"
-                to="/articles"
-              >
+              <Link className="nav-link" to="/articles">
                 Articles
               </Link>
             </li>
-            <li className="nav-item dropdown">
+            {/* <li className="nav-item dropdown">
               <a
                 className="nav-link dropdown-toggle"
                 href="/"
@@ -51,7 +47,7 @@ const NavBar = (props) => {
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
-                Dropdown
+                More
               </a>
               <ul className="dropdown-menu">
                 <li>
@@ -78,16 +74,16 @@ const NavBar = (props) => {
               <a className="nav-link disabled" aria-disabled="true">
                 Disabled
               </a>
-            </li>
+            </li> */}
           </ul>
-          <form className="d-flex" role="search">
+          <form className="d-flex">
             <input
               className="form-control me-2"
               type="search"
               placeholder="Search"
               aria-label="Search"
             />
-            <button className="btn btn-outline-success" type="submit">
+            <button className="btn btn-light" type="submit">
               Search
             </button>
           </form>
