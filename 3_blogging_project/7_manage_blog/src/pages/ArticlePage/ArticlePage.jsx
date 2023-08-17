@@ -9,7 +9,7 @@ const ArticlePage = () => {
   const articleId = params.articleId
 
   useEffect(() => {
-    setArticleInfo({ upvotes: 3, comments: [] }, [])
+    setArticleInfo({ upvotes: 3, comments: [] })
   }, [])
   // useEffect(() => {
   //   setArticleInfo({ upvotes: 3, comments: [] })

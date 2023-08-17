@@ -1,5 +1,5 @@
 import { ArticlesList } from '../../components/ArticlesList'
-import { Articles } from '../Article-Content/Article-Content'
+import { Articles } from '../Article-Content/Article-Content.jsx'
 
 const ArticlesListPage = () => {
   return (

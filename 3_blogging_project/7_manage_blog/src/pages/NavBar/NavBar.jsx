@@ -1,7 +1,20 @@
 import React from 'react'
+import './NavBar.css'
+import styles from './NavBar.module.css'
 import { Link } from 'react-router-dom'
 
 const NavBar = (props) => {
+  const articleLinks = props.articles.map((article) => (
+    <li key={article.articleId} className={styles['nav-item']}>
+      <Link
+        className={styles['nav-link']}
+        to={`/articles/${article.articleId}`}
+      >
+        {article.title}
+      </Link>
+    </li>
+  ))
+
   return (
     <nav
       className="navbar navbar-expand-lg navbar-dark bg-primary"
@@ -9,7 +22,7 @@ const NavBar = (props) => {
     >
       <div className="container-fluid">
         <Link className="navbar-brand" to="/">
-          My Awesome Website
+          My Awesome Blog
         </Link>
         <button
           className="navbar-toggler"
@@ -39,7 +52,7 @@ const NavBar = (props) => {
                 Articles
               </Link>
             </li>
-            {/* <li className="nav-item dropdown">
+            <li className="nav-item dropdown">
               <a
                 className="nav-link dropdown-toggle"
                 href="/"
@@ -47,34 +60,10 @@ const NavBar = (props) => {
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
-                More
+                Browse Articles
               </a>
-              <ul className="dropdown-menu">
-                <li>
-                  <a className="dropdown-item" href="#">
-                    Action
-                  </a>
-                </li>
-                <li>
-                  <a className="dropdown-item" href="#">
-                    Another action
-                  </a>
-                </li>
-                <li>
-                  <hr className="dropdown-divider" />
-                </li>
-                <li>
-                  <a className="dropdown-item" href="#">
-                    Something else here
-                  </a>
-                </li>
-              </ul>
+              <ul className="dropdown-menu">{articleLinks}</ul>
             </li>
-            <li className="nav-item">
-              <a className="nav-link disabled" aria-disabled="true">
-                Disabled
-              </a>
-            </li> */}
           </ul>
           <form className="d-flex">
             <input

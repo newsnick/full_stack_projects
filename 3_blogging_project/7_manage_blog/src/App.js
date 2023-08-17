@@ -1,4 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 import './App.css'
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
@@ -7,12 +8,13 @@ import ArticlePage from './pages/ArticlePage/ArticlePage.jsx'
 import ArticlesListPage from './pages/ArticlesListPage/ArticlesListPage.jsx'
 import AboutPage from './pages/AboutPage/AboutPage.jsx'
 import NavBar from './pages/NavBar/NavBar.jsx'
+import { Articles } from './pages/Article-Content/Article-Content.jsx'
 import NotFoundPage from './pages/NotFoundPage/NotFoundPage.jsx'
 function App() {
   return (
     <BrowserRouter>
       <div className="App">
-        <NavBar />
+        <NavBar articles={Articles} />
         <div id="page-body">
           <Routes>
             <Route path="/" element={<HomePage />} />
