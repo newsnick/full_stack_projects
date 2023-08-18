@@ -11,7 +11,12 @@ app.use(express.json())
 const PORT = 8080
 
 // Enable cors for all routes
-app.use(cors())
+app.use(
+  cors({
+    origin: 'http://localhost:3000', // Replace with your React app's domain
+    methods: 'GET,POST, PUT, DELETE', // Specify the allowed HTTP methods
+  })
+)
 
 const articleRoutes = require('./src/routes/article.routes')
 
