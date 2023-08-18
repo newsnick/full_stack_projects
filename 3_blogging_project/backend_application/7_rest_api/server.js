@@ -1,3 +1,6 @@
+// setup CRUD environment using mongodb atlas db, node.js, express
+// dependencies: express, cors, dotenv, mongodb, mongoose, nodemon
+// npm install express cors dotenv mongodb mongoose nodemon
 const express = require('express')
 const cors = require('cors')
 
