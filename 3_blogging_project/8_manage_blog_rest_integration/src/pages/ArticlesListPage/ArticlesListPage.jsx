@@ -1,6 +1,6 @@
 //ArticlesListPage.jsx
-import React, { useState, useEffect } from 'react'
-import { ArticlePage } from '../ArticlePage/ArticlePage'
+import React from 'react'
+//import { ArticlePage } from '../ArticlePage/ArticlePage'
 import FetchArticles from '../../components/FetchArticles/FetchArticles'
 
 const ArticlesListPage = () => {

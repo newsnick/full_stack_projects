@@ -1,7 +1,8 @@
-// added sample data to Artical-content page.
+// implement Rest Api for fetching articles from external database
+// created FetchArticles.jsx component with useState and useEffect hooks
 // make changes to get article page data rendering basis on article id. //not using article name
-// added page not found on wrong articleid
-// added state to articlepage and also added useEffect hook
+// render fetched data (FetchArticles) into ArticlePage.jsx with props
+// render FetchArticles in the ArticlesListPage component.
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 import './App.css'
@@ -13,6 +14,7 @@ import ArticlesListPage from './pages/ArticlesListPage/ArticlesListPage.jsx'
 import AboutPage from './pages/AboutPage/AboutPage.jsx'
 import NavBar from './components/NavBar/NavBar.jsx'
 import { Articles } from './pages/Article-Content/Article-Content.jsx'
+
 import NotFoundPage from './pages/NotFoundPage/NotFoundPage.jsx'
 function App() {
   return (
