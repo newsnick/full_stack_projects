@@ -1,0 +1,23 @@
+#sidebar {
+  min-width: 250px;
+  max-width: 250px;
+  background-color: #343a40;
+  color: #fff;
+  transition: all 0.3s;
+
+  overflow-y: auto;
+  top: 0;
+  bottom: 0;
+}
+
+#sidebar.active {
+  margin-left: -250px;
+}
+
+#sidebar .list-unstyled {
+  padding: 0;
+}
+
+#sidebar h1 {
+  margin-bottom: 1rem;
+}
