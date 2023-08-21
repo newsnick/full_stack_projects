@@ -1,9 +1,10 @@
-// implement Rest Api for fetching articles from external database
-// created FetchArticles.jsx component with useState and useEffect hooks
-// make changes to get article page data rendering basis on article id. //not using article name
-// render fetched data (FetchArticles) into ArticlePage.jsx with props
-// render FetchArticles in the ArticlesListPage component.
+// implement Rest Api for fetching articles from external database:
+// App.jsx Fetches a list of articles from a local API endpoint and displays various pages using React Router.
+// ArticleList.jsx renders a list of articles with truncated content, linking to the full article page.
+// ArticlePage.jsx displays the details of a specific article, including title, upvotes, and full content. If the article is not found, it shows a "Not Found" page.
+
 // App.js
+import React, { useState, useEffect } from 'react'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 import './App.css'
@@ -18,6 +19,26 @@ import { Articles } from './pages/Article-Content/Article-Content.jsx'
 
 import NotFoundPage from './pages/NotFoundPage/NotFoundPage.jsx'
 function App() {
+  const [articles, setArticles] = useState([])
+
+  useEffect(() => {
+    fetch('http://localhost:8080/api/articles', {
+      method: 'GET',
+      headers: {
+        Authorization: 'none',
+      },
+    })
+      .then((response) => {
+        console.log('Response status:', response.status)
+        return response.json()
+      })
+      .then((data) => {
+        console.log('Fetched data:', data)
+        setArticles(data)
+      })
+      .catch((error) => console.error('Error fetching data:', error))
+  }, [])
+
   return (
     <BrowserRouter>
       <div className="App">
@@ -26,8 +47,14 @@ function App() {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/about" element={<AboutPage />} />
-            <Route path="/articles" element={<ArticlesListPage />} />
-            <Route path="/articles/:articleId" element={<ArticlePage />} />
+            <Route
+              path="/articles"
+              element={<ArticlesListPage articles={articles} />}
+            />
+            <Route
+              path="/articles/:articleId"
+              element={<ArticlePage articles={articles} />}
+            />
             <Route path="*" element={<NotFoundPage />} />
           </Routes>
         </div>
