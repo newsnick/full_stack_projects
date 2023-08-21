@@ -18,7 +18,7 @@ const NavBar = (props) => {
 
   return (
     <nav
-      className={`navbar navbar-expand-lg navbar-dark bg-primary ${styles['navbar-custom']}`}
+      className={`navbar navbar-expand-lg navbar-dark bg-dark ${styles['navbar-custom']}`}
     >
       <NavBarHeader />
       <button

@@ -1,0 +1,18 @@
+.articles-list-item {
+  text-decoration: none;
+  color: #333;
+  padding: 16px 0;
+  border-bottom: 1px solid #ccc;
+  display: block;
+}
+
+.articles-list-item:hover {
+  background-color: #f7f7f7;
+}
+
+.articles-list-item p {
+  padding: 16px 0;
+  border-bottom: none;
+  color: #555;
+  line-height: 1.5;
+}

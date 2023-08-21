@@ -47,3 +47,6 @@ li.nav-link {
   width: 200px;
   margin-top: -9px;
 } */
+.navbar-collapse {
+  justify-content: space-between;
+}

@@ -43,7 +43,7 @@ const NavBarLinks = (props) => {
       {/* <li className={`nav-item dropdown ${styles['nav-item-dropdown']}`}>
          {props.articleLinks}
       </li> */}
-      <li className={`nav-item dropdown ${styles['nav-item-dropdown']}`}>
+      {/* <li className={`nav-item dropdown ${styles['nav-item-dropdown']}`}>
         <a
           className={`nav-link dropdown-toggle ${styles['nav-link-dropdown']}`}
           href="/"
@@ -56,7 +56,7 @@ const NavBarLinks = (props) => {
         <ul className={`dropdown-menu ${styles['dropdown-menu']}`}>
           {props.articleLinks}
         </ul>
-      </li>
+      </li> */}
     </ul>
   )
 }

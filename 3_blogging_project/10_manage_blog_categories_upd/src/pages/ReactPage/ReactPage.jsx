@@ -10,7 +10,7 @@ export const ReactPage = () => {
   const { articleId } = useParams()
   const articles = useContext(FetchedArticlesContext)
 
-  // Find the article with the matching articleId
+  // Find the article with the matching articleId ("react"=
   const selectedArticle = articles.find(
     (article) => article.articleId === articleId
   )

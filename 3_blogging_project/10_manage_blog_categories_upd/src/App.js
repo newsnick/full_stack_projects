@@ -18,6 +18,7 @@
    Usage: Include the SelectedArticle component in the ReactPage component.
 6. NavBar2.jsx to render category ReactPage.jsx
  */
+// App.js
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 import './App.css'
@@ -32,7 +33,8 @@ import NavBar from './components/NavBar/NavBar.jsx'
 import NavBar2 from './components/NavBar2/NavBar2.jsx'
 import { Articles } from './pages/Article-Content/Article-Content.jsx'
 import FetchReactArticles from './components/FetchReactArticles/FetchReactArticles.jsx' // Import the context provider
-
+import FetchJSArticles from './components/FetchJSArticles/FetchJSArticles.jsx'
+import JSPage from './pages/JSPage/JSPage.jsx'
 import NotFoundPage from './pages/NotFoundPage/NotFoundPage.jsx'
 
 function App() {
@@ -57,6 +59,15 @@ function App() {
               />
             </Routes>
           </FetchReactArticles>
+          <FetchJSArticles>
+            {' '}
+            <Routes>
+              <Route
+                path="/javascript-articles/:articleId"
+                element={<JSPage />}
+              />
+            </Routes>
+          </FetchJSArticles>
         </div>
       </div>
     </BrowserRouter>

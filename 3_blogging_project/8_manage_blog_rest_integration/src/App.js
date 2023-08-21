@@ -3,6 +3,7 @@
 // make changes to get article page data rendering basis on article id. //not using article name
 // render fetched data (FetchArticles) into ArticlePage.jsx with props
 // render FetchArticles in the ArticlesListPage component.
+// App.js
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 import './App.css'

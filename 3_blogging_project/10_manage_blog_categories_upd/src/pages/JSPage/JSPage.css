@@ -1,0 +1,15 @@
+.js-page-container {
+  display: grid;
+  grid-template-columns: 0.3fr 1fr;
+  gap: 20px;
+}
+
+.article-list {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.selected-article {
+  flex: 1;
+  padding-left: 20px;
+}
