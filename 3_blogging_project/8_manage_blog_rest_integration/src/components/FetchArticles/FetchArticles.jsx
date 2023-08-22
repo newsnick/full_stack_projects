@@ -1,11 +1,7 @@
 // FetchArticles.jsx
-import React, { useState, useEffect } from 'react'
-import { ArticleList } from '../../pages/ArticleList/ArticleList'
-import './FetchArticles.css'
+import { useEffect } from 'react'
 
-const FetchArticles = () => {
-  const [articles, setArticles] = useState([])
-
+const FetchArticles = ({ setArticles }) => {
   useEffect(() => {
     fetch('http://localhost:8080/api/articles', {
       method: 'GET',
@@ -22,9 +18,9 @@ const FetchArticles = () => {
         setArticles(data)
       })
       .catch((error) => console.error('Error fetching data:', error))
-  }, [])
+  }, [setArticles])
 
-  return <ArticleList articles={articles} />
+  return null
 }
 
 export default FetchArticles

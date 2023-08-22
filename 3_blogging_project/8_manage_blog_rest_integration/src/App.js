@@ -1,10 +1,10 @@
 // implement Rest Api for fetching articles from external database:
-// App.jsx Fetches a list of articles from a local API endpoint and displays various pages using React Router.
+// FetchArticle.jsx Fetches a list of articles from a local API endpoint and displays various pages using React Router.
 // ArticleList.jsx renders a list of articles with truncated content, linking to the full article page.
 // ArticlePage.jsx displays the details of a specific article, including title, upvotes, and full content. If the article is not found, it shows a "Not Found" page.
 
 // App.js
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 import './App.css'
@@ -16,34 +16,18 @@ import ArticlesListPage from './pages/ArticlesListPage/ArticlesListPage.jsx'
 import AboutPage from './pages/AboutPage/AboutPage.jsx'
 import NavBar from './components/NavBar/NavBar.jsx'
 import { Articles } from './pages/Article-Content/Article-Content.jsx'
+import FetchArticles from './components//FetchArticles/FetchArticles.jsx'
 
 import NotFoundPage from './pages/NotFoundPage/NotFoundPage.jsx'
 function App() {
   const [articles, setArticles] = useState([])
-
-  useEffect(() => {
-    fetch('http://localhost:8080/api/articles', {
-      method: 'GET',
-      headers: {
-        Authorization: 'none',
-      },
-    })
-      .then((response) => {
-        console.log('Response status:', response.status)
-        return response.json()
-      })
-      .then((data) => {
-        console.log('Fetched data:', data)
-        setArticles(data)
-      })
-      .catch((error) => console.error('Error fetching data:', error))
-  }, [])
 
   return (
     <BrowserRouter>
       <div className="App">
         <NavBar articles={Articles} />
         <div id="page-body">
+          <FetchArticles setArticles={setArticles} />
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/about" element={<AboutPage />} />
