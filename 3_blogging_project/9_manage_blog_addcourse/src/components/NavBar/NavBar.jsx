@@ -1,10 +1,11 @@
-// Navbar.jsx
 import React from 'react'
 import './NavBar.css'
 import styles from './NavBar.module.css'
+// import { Link } from 'react-router-dom'
 import NavBarLink from '../NavBarLink/NavBarLink'
 import NavBarLinks from '../NavBarLinks/NavBarLinks'
 import NavBarHeader from '../NavBarHeader/NavBarHeader'
+import NavBarForm from '../NavBarForm/NavBarForm'
 
 const NavBar = (props) => {
   const articleLinks = props.articles.map((article) => (
@@ -36,6 +37,7 @@ const NavBar = (props) => {
         id="navbarSupportedContent"
       >
         <NavBarLinks articleLinks={articleLinks} />
+        <NavBarForm />
       </div>
     </nav>
   )
