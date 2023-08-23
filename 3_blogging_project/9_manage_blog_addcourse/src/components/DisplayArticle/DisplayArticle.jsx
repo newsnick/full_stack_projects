@@ -19,7 +19,6 @@ const DisplayArticle = ({ articleId }) => {
       <h1>{selectedArticle.title}</h1>
       <p>{selectedArticle.content}</p>
       <p>{selectedArticle.upvotes}</p>
-      {/* <p>{selectedArticle.comments}</p> */}
     </div>
   )
 }
