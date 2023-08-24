@@ -6,10 +6,12 @@
   display: block;
 } */
 
+li,
 a.list-items {
   color: #ffffff8c;
 }
 
+li,
 a.list-items:hover {
   color: lightgray;
   font-weight: 500;

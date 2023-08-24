@@ -16,7 +16,7 @@ const FetchReactArticles = ({ children }) => {
     })
       .then((response) => response.json())
       .then((data) => {
-        //Filter articles that have "react" in their aritlceId
+        //Filter articles that have "react" in their articleId
         const filteredArticles = data.filter((article) =>
           article.articleId.includes('react')
         )

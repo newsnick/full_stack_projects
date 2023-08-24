@@ -1,9 +1,10 @@
-// // implement Rest Api for fetching articles from external database:
-// // FetchArticle.jsx Fetches a list of articles from a local API endpoint and displays various pages using React Router.
-// // ArticleList.jsx renders a list of articles with truncated content, linking to the full article page.
-// // ArticlePage.jsx displays the details of a specific article, including title, upvotes, and full content. If the article is not found, it shows a "Not Found" page.
-
-// // App.js
+// added:
+// ReactPage.jsx: Main React articles page with list and selected article display.
+// ArticleList.jsx: Displays a list of article links.
+// SelectedArticle.jsx: Displays selected article details or a selection prompt.
+// DisplayArticle.jsx: Displays content of a selected article.
+// FetchReactArticles.jsx: Provides a context for fetching and storing React-related articles.
+// App.js
 import React, { useState } from 'react'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'
