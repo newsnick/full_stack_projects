@@ -8,7 +8,7 @@ const ArticlesListPage = () => {
 
   return (
     <>
-      <h1>Article</h1>
+      <h1>Articles</h1>
       <FetchArticles setArticles={setArticles} />{' '}
       <ArticleList articles={articles} />{' '}
     </>

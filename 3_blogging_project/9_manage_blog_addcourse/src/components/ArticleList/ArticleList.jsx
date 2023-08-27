@@ -10,7 +10,7 @@ const ArticleList = () => {
   return (
     <nav id="sidebar" className="bg-dark">
       <div className="p-4">
-        <h1 className="text-white">React Articles</h1>
+        <h1 className="text-white">React</h1>
 
         <ul className="list-unstyles components">
           {articles.map((article) => (
