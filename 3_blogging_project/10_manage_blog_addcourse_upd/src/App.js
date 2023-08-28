@@ -1,9 +1,10 @@
-// added:
-// ReactPage.jsx: Main React articles page with list and selected article display.
-// ArticleList.jsx: Displays a list of article links.
-// SelectedArticle.jsx: Displays selected article details or a selection prompt.
-// DisplayArticle.jsx: Displays content of a selected article.
-// FetchReactArticles.jsx: Provides a context for fetching and storing React-related articles.
+// updates:
+//App.js: 1. fetch and provide courses context (FetchCourses) 2. route for course list 3. route for individual course and its topics.
+// FetchCourses.jsx: fetch courses from local JSON file
+// NavBarLinks.jsx: map and display courses in dropdown
+// CourseTopicsPage.jsx: find the selected course based on courseIm
+// CourseList.jsx: map and display selected course's topics
+
 // App.js
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.css'
@@ -16,7 +17,7 @@ import NavBar from './components/NavBar/NavBar.jsx'
 import { FetchCourses } from './components/FetchCourses/FetchCourses.jsx'
 import NotFoundPage from './pages/NotFoundPage/NotFoundPage.jsx'
 import CourseList from './components/CourseList/CourseList.jsx'
-import CourseTopicsPage from './pages/CourseTopicsPage/CourseTopicsPage.jsx' // Import the component
+import CourseTopicsPage from './pages/CourseTopicsPage/CourseTopicsPage.jsx'
 import TopicContent from './pages/TopicContent/TopicContent.jsx'
 
 function App() {
@@ -32,15 +33,20 @@ function App() {
               <Route path="*" element={<NotFoundPage />} />
 
               {/* Route for course list */}
-              <Route path="/courses" element={<CourseList />} />
+              <Route path="/courses/" element={<CourseList />} />
 
               {/* Route for individual course and its topics */}
-              <Route
+              {/* <Route
                 path="/courses/:courseTitle"
                 element={<CourseTopicsPage />}
-              />
-              <Route
+              /> */}
+              <Route path="/courses/:courseId" element={<CourseTopicsPage />} />
+              {/* <Route
                 path="/courses/:courseTitle/topics/:topicIndex"
+                element={<TopicContent />}
+              /> */}
+              <Route
+                path="/courses/:courseId/topics/:topicIndex"
                 element={<TopicContent />}
               />
             </Routes>

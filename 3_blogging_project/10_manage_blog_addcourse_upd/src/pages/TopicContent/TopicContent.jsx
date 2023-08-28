@@ -2,7 +2,8 @@
 
 import React, { useContext } from 'react'
 import { useParams } from 'react-router-dom'
-import { FetchedCoursesContext } from '../../components/FetchCourses/FetchCourses' // Adjust the path
+import { FetchedCoursesContext } from '../../components/FetchCourses/FetchCourses'
+import './TopicContent.css'
 
 const TopicContent = () => {
   const { courseTitle, topicIndex } = useParams()
@@ -21,7 +22,7 @@ const TopicContent = () => {
   const selectedTopic = selectedCourse.topics[topicIndex]
 
   return (
-    <div>
+    <div className="content-box">
       <h2>{selectedTopic.title}</h2>
       <p>{selectedTopic.content}</p>
     </div>

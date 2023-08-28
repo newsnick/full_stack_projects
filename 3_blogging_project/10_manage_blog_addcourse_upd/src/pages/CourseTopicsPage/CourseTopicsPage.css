@@ -1,4 +1,4 @@
-.topics-page-main {
+/* .topics-page-main {
   display: grid;
   grid-template-columns: 0.3fr 1fr;
   gap: 20px;
@@ -21,4 +21,19 @@
   padding-left: 20px;
   max-width: 900px;
   padding-top: 20px;
+} */
+/* CourseTopicsPage.css */
+.topics-page-main {
+  display: flex;
+}
+
+.topics-list {
+  flex: 1;
+  /* padding: 20px; */
+}
+
+.topic-content {
+  flex: 2;
+  padding: 20px;
+  border-left: 1px solid #ccc;
 }

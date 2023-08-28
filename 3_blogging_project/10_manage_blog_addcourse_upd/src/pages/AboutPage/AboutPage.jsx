@@ -1,5 +1,12 @@
+import './AboutPage.css'
+
 const AboutPage = () => {
-  return <h1>This is my About Page</h1>
+  return (
+    <div className="aboutpage-main">
+      {' '}
+      <h1>This is my About Page</h1>
+    </div>
+  )
 }
 
 export default AboutPage

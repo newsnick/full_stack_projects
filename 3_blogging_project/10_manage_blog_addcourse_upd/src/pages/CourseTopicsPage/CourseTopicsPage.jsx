@@ -1,5 +1,4 @@
 // CourseTopicsPage.jsx
-
 import React, { useContext } from 'react'
 import { useParams } from 'react-router-dom'
 import { FetchedCoursesContext } from '../../components/FetchCourses/FetchCourses'
@@ -8,22 +7,26 @@ import SelectedCourse from '../../components/SelectedCourse/SelectedCourse'
 import './CourseTopicsPage.css'
 
 const CourseTopicsPage = () => {
-  const { course_title, topicIndex } = useParams() // Retrieve topicIndex from URL
+  const { courseId, topicIndex } = useParams()
   const courses = useContext(FetchedCoursesContext)
 
-  // Find the selected course with matching course_title
-  const selectedCourse = courses.find(
-    (course) => course.course_title === course_title
-  )
+  const selectedCourse = courses.find((course) => course._id === courseId)
+
+  if (!selectedCourse) {
+    return <div>Course not found.</div>
+  }
 
   return (
     <div className="topics-page-main">
-      <CourseList courses={courses} />
-      <SelectedCourse
-        selectedCourse={selectedCourse}
-        topicIndex={topicIndex}
-      />{' '}
-      {/* Pass topicIndex */}
+      <div className="topics-list">
+        <CourseList courses={courses} selectedCourse={selectedCourse} />
+      </div>
+      <div className="topic-content">
+        <SelectedCourse
+          selectedCourse={selectedCourse}
+          topicIndex={topicIndex}
+        />
+      </div>
     </div>
   )
 }
