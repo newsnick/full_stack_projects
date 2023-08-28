@@ -1,8 +1,8 @@
 // updates:
 //App.js: 1. fetch and provide courses context (FetchCourses) 2. route for course list 3. route for individual course and its topics.
-// FetchCourses.jsx: fetch courses from local JSON file
+// FetchCourses.jsx: fetch courses from local JSON file dynamically
 // NavBarLinks.jsx: map and display courses in dropdown
-// CourseTopicsPage.jsx: find the selected course based on courseIm
+// CourseTopicsPage.jsx: Find the selected course based on courseId dynamically
 // CourseList.jsx: map and display selected course's topics
 
 // App.js
