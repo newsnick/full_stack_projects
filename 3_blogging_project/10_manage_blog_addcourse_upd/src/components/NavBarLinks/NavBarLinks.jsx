@@ -4,6 +4,7 @@ import styles from '../NavBar/NavBar.module.css'
 import NavBarLink from '../NavBarLink/NavBarLink'
 import { Link } from 'react-router-dom'
 import { FetchedCoursesContext } from '../FetchCourses/FetchCourses'
+import './NavBarLinks.css'
 
 const NavBarLinks = (props) => {
   const courses = useContext(FetchedCoursesContext)
@@ -16,7 +17,7 @@ const NavBarLinks = (props) => {
 
       <li className="nav-item dropdown">
         <a
-          className="nav-link dropdown-toggle"
+          className="nav-link dropdown-toggle "
           href="/"
           role="button"
           data-bs-toggle="dropdown"
