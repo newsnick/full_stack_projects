@@ -6,13 +6,11 @@ import { FetchedCoursesContext } from '../../components/FetchCourses/FetchCourse
 import './TopicContent.css'
 
 const TopicContent = () => {
-  const { courseTitle, topicIndex } = useParams()
+  const { courseId, topicIndex } = useParams()
   const courses = useContext(FetchedCoursesContext)
 
   // Find the selected course based on the courseTitle parameter
-  const selectedCourse = courses.find(
-    (course) => course.course_title === courseTitle
-  )
+  const selectedCourse = courses.find((course) => course._id === courseId)
 
   // Check if the selected course and topicIndex are valid
   if (!selectedCourse || topicIndex >= selectedCourse.topics.length) {

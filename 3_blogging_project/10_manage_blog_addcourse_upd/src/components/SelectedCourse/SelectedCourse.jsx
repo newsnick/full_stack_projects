@@ -1,7 +1,8 @@
 // SelectedCourse.jsx
-import React from 'react'
 
+import React from 'react'
 import TopicContent from '../../pages/TopicContent/TopicContent'
+
 const SelectedCourse = ({ selectedCourse, topicIndex }) => {
   return (
     <div className="selected-course">

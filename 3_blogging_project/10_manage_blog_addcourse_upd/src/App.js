@@ -18,7 +18,6 @@ import { FetchCourses } from './components/FetchCourses/FetchCourses.jsx'
 import NotFoundPage from './pages/NotFoundPage/NotFoundPage.jsx'
 import CourseList from './components/CourseList/CourseList.jsx'
 import CourseTopicsPage from './pages/CourseTopicsPage/CourseTopicsPage.jsx'
-import TopicContent from './pages/TopicContent/TopicContent.jsx'
 
 function App() {
   return (
@@ -31,24 +30,14 @@ function App() {
               <Route path="/" element={<HomePage />} />
               <Route path="/about" element={<AboutPage />} />
               <Route path="*" element={<NotFoundPage />} />
-
               {/* Route for course list */}
-              <Route path="/courses/" element={<CourseList />} />
-
+              <Route path="/courses/*" element={<CourseList />} />
               {/* Route for individual course and its topics */}
-              {/* <Route
-                path="/courses/:courseTitle"
-                element={<CourseTopicsPage />}
-              /> */}
-              <Route path="/courses/:courseId" element={<CourseTopicsPage />} />
-              {/* <Route
-                path="/courses/:courseTitle/topics/:topicIndex"
-                element={<TopicContent />}
-              /> */}
               <Route
                 path="/courses/:courseId/topics/:topicIndex"
-                element={<TopicContent />}
+                element={<CourseTopicsPage />}
               />
+              <Route path="/courses/:courseId" element={<CourseTopicsPage />} />
             </Routes>
           </div>
         </FetchCourses>

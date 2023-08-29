@@ -1,6 +1,6 @@
 // FetchCourses.jsx
+
 import React, { createContext, useEffect, useState } from 'react'
-import axios from 'axios'
 
 export const FetchedCoursesContext = createContext()
 
@@ -8,10 +8,20 @@ export const FetchCourses = ({ children }) => {
   const [courses, setCourses] = useState([])
 
   useEffect(() => {
-    axios
-      .get('../../courses.json')
+    fetch(process.env.PUBLIC_URL + '/data/courses.json', {
+      headers: {
+        Accept: 'application/json',
+      },
+    }) // Adjusted path to the JSON file
       .then((response) => {
-        setCourses(response.data)
+        if (!response.ok) {
+          throw new Error('Network response was not ok')
+        }
+        return response.json()
+      })
+      .then((data) => {
+        setCourses(data)
+        console.log(data)
       })
       .catch((error) => {
         console.error('Error fetching courses:', error)
