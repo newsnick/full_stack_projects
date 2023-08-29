@@ -18,7 +18,8 @@ a.list-items:hover {
 }
 
 .courses-list-item:hover {
-  background-color: #f7f7f7;
+  /* background-color: #f7f7f7; */
+  background-color: lightcyan;
 }
 
 .courses-list-item p {
@@ -43,7 +44,9 @@ a.list-items:hover {
 .course-title {
   font-size: 26px;
   font-weight: 600;
-  margin-bottom: 5px;
+
+  margin-bottom: 20px;
+  color: #0074d9;
 }
 
 .course-excerpt {

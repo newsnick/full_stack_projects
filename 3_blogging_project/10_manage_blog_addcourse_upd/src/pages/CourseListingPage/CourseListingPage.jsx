@@ -1,17 +1,18 @@
-// //CourseListingPage.jsx
-import React, { useState } from 'react'
+//CourseListingPage.jsx
+import React, { useContext } from 'react'
 import CourseSnippets from '../CourseSnippets/CourseSnippets'
-import FetchCourses from '../../components/FetchCourses/FetchCourses'
+import { FetchedCoursesContext } from '../../components/FetchCourses/FetchCourses'
+import './CourseListingPage.css'
 
 const CourseListingPage = () => {
-  const [courses, setCourses] = useState([]) // Create state for courses
+  const courses = useContext(FetchedCoursesContext)
 
   return (
-    <>
-      <h1>Articles</h1>
-      <FetchCourses /> {/* Just use the context */}
-      <CourseSnippets /> {/* Use the courses from context */}
-    </>
+    <div className="listing-box">
+      <h1>Topics</h1>
+
+      <CourseSnippets courses={courses} />
+    </div>
   )
 }
 

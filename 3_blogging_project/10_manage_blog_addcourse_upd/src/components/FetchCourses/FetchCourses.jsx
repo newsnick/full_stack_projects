@@ -12,7 +12,7 @@ export const FetchCourses = ({ children }) => {
       headers: {
         Accept: 'application/json',
       },
-    }) // Adjusted path to the JSON file
+    })
       .then((response) => {
         if (!response.ok) {
           throw new Error('Network response was not ok')
