@@ -37,3 +37,7 @@
   padding: 20px;
   border-left: 1px solid #ccc;
 }
+
+.p-4 {
+  height: 100vh;
+}
