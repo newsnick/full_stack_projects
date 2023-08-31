@@ -8,7 +8,7 @@ import './CourseTopicsPage.css'
 
 const CourseTopicsPage = () => {
   const { courseId, topicIndex } = useParams()
-  const courses = useContext(FetchedCoursesContext)
+  const { courses } = useContext(FetchedCoursesContext)
 
   const selectedCourse = courses.find((course) => course._id === courseId)
 

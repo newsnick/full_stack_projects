@@ -7,7 +7,7 @@ import './TopicContent.css'
 
 const TopicContent = () => {
   const { courseId, topicIndex } = useParams()
-  const courses = useContext(FetchedCoursesContext)
+  const { courses } = useContext(FetchedCoursesContext)
 
   // Find the selected course based on the courseTitle parameter
   const selectedCourse = courses.find((course) => course._id === courseId)

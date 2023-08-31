@@ -5,7 +5,7 @@ import { FetchedCoursesContext } from '../../components/FetchCourses/FetchCourse
 import './CourseListingPage.css'
 
 const CourseListingPage = () => {
-  const courses = useContext(FetchedCoursesContext)
+  const { courses } = useContext(FetchedCoursesContext)
 
   return (
     <div className="listing-box">

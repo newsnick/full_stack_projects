@@ -7,7 +7,7 @@ import { FetchedCoursesContext } from '../FetchCourses/FetchCourses'
 import './NavBarLinks.css'
 
 const NavBarLinks = (props) => {
-  const courses = useContext(FetchedCoursesContext)
+  const { courses } = useContext(FetchedCoursesContext)
 
   return (
     <ul className={`navbar-nav me-auto mb-2 mb-lg-0 ${styles['nav-list']}`}>

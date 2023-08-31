@@ -16,18 +16,29 @@ import NotFoundPage from './pages/NotFoundPage/NotFoundPage.jsx'
 import CourseList from './components/CourseList/CourseList.jsx'
 import CourseTopicsPage from './pages/CourseTopicsPage/CourseTopicsPage.jsx'
 import CourseListingPage from './pages/CourseListingPage/CourseListingPage.jsx'
+import AddCourse from './components/AddCourse/AddCourse.jsx'
+import AddCourseButton from './components/AddCourseButton/AddCourseButton.jsx'
+import DeleteCourse from './components/DeleteCourse/DeleteCourse.jsx'
+import DeleteCourseButton from './components/DeleteCourseButton/DeleteCourseButton.jsx'
+import UpdateCourse from './components/UpdateCourse/UpdateCourse.jsx'
+import UpdateCourseButton from './components/UpdateCourseButton/UpdateCourseButton.jsx'
 
 function App() {
   return (
     <BrowserRouter>
       <div className="App">
         <FetchCourses>
-          <NavBar />
+          {' '}
+          <NavBar />{' '}
+          <div className="buttons">
+            <AddCourseButton /> <UpdateCourseButton />
+            <DeleteCourseButton />
+          </div>
           <div id="page-body">
             <Routes>
+              {' '}
               <Route path="/" element={<HomePage />} />
               <Route path="/about" element={<AboutPage />} />
-              <Route path="*" element={<NotFoundPage />} />
               <Route path="/courses" element={<CourseListingPage />} />
               {/* Route for course list */}
               <Route path="/courses/*" element={<CourseList />} />
@@ -37,6 +48,11 @@ function App() {
                 element={<CourseTopicsPage />}
               />
               <Route path="/courses/:courseId" element={<CourseTopicsPage />} />
+              {/* Place AddCourse component within the Routes */}
+              <Route path="/add-course" element={<AddCourse />} />
+              <Route path="/delete-course" element={<DeleteCourse />} />
+              <Route path="/update-course" element={<UpdateCourse />} />
+              <Route path="*" element={<NotFoundPage />} />
             </Routes>
           </div>
         </FetchCourses>
