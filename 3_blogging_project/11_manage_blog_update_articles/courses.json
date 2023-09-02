@@ -1,0 +1,68 @@
+[
+  {
+    "_id": "course_id_1",
+    "course_title": "Java Programming",
+    "topics": [
+      {
+        "title": "Introduction to Java",
+        "content": "This topic covers the basics of Java programming."
+      },
+      {
+        "title": "Object-Oriented Programming",
+        "content": "Learn about classes, objects, inheritance, and polymorphism"
+      },
+      {
+        "title": "Exception Handling",
+        "content": "Understand how to handle exceptions in Java applications."
+      },
+      {
+        "title": "Data Structures and Algorithms in Java",
+        "content": "Explore fundamental data structures and algorithms implemented"
+      }
+    ]
+  },
+  {
+    "_id": "course_id_2",
+    "course_title": "React.js Fundamentals",
+    "topics": [
+      {
+        "title": "Getting Started with React",
+        "content": "Learn the basics of React and setting up your environment."
+      },
+      {
+        "title": "Components and Props",
+        "content": "Understand how to create and use components in React."
+      },
+      {
+        "title": "State and Lifecycle",
+        "content": "Explore how to manage component state and lifecycle events. "
+      },
+      {
+        "title": "Managing State with React Hooks",
+        "content": "State management is a crucial aspect of building dynamic "
+      }
+    ]
+  },
+  {
+    "_id": "course_id_3",
+    "course_title": "Node.js Essentials",
+    "topics": [
+      {
+        "title": "Introduction to Node.js",
+        "content": "Learn about Node.js and its event-driven, non-blocking "
+      },
+      {
+        "title": "Working with Modules",
+        "content": "Understand how to use modules to organize your Node.js code."
+      },
+      {
+        "title": "Express.js Framework",
+        "content": "Explore building web applications using the Express.js framework."
+      },
+      {
+        "title": "Middleware in Express.js",
+        "content": "Middleware is a crucial concept in the world of Express.js"
+      }
+    ]
+  }
+]
