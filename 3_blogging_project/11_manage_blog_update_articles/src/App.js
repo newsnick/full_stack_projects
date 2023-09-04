@@ -23,6 +23,8 @@ import DeleteCourse from './components/DeleteCourse/DeleteCourse.jsx'
 import UpdateCourse from './components/UpdateCourse/UpdateCourse.jsx'
 //import UpdateCourseButton from './components/UpdateCourseButton/UpdateCourseButton.jsx'
 import ArticlePage from './pages/ArticlePage/ArticlePage.jsx'
+import LoginForm from './components/LoginForm/LoginForm.jsx'
+import LoginFormButton from './components/LoginFormButton/LoginFormButton.jsx'
 
 function App() {
   return (
@@ -35,6 +37,7 @@ function App() {
             <AddCourseButton /> <UpdateCourseButton />
             <DeleteCourseButton />
           </div> */}
+          <LoginFormButton />
           <div id="page-body">
             <Routes>
               {' '}
@@ -55,6 +58,7 @@ function App() {
               <Route path="/update-course" element={<UpdateCourse />} />
               <Route path="/articles/:articleId" element={<ArticlePage />} />
               <Route path="*" element={<NotFoundPage />} />
+              <Route path="/login" element={<LoginForm />} />
             </Routes>
           </div>
         </FetchCourses>
