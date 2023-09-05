@@ -25,6 +25,7 @@ import UpdateCourse from './components/UpdateCourse/UpdateCourse.jsx'
 import ArticlePage from './pages/ArticlePage/ArticlePage.jsx'
 import LoginForm from './components/LoginForm/LoginForm.jsx'
 import LoginFormButton from './components/LoginFormButton/LoginFormButton.jsx'
+import RegisterForm from './components/RegisterForm/RegisterForm.jsx'
 
 function App() {
   return (
@@ -59,6 +60,7 @@ function App() {
               <Route path="/articles/:articleId" element={<ArticlePage />} />
               <Route path="*" element={<NotFoundPage />} />
               <Route path="/login" element={<LoginForm />} />
+              <Route path="/register" element={<RegisterForm />} />
             </Routes>
           </div>
         </FetchCourses>

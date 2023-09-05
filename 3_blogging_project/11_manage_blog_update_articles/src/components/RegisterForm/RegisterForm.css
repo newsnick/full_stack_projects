@@ -1,4 +1,8 @@
-.login-form {
+a.back-button {
+  text-decoration: none;
+}
+
+.register-form {
   position: absolute;
   padding: 30px 90px 30px 90px;
   background-color: aliceblue;
@@ -7,16 +11,16 @@
   width: 500px;
 }
 
-.login-container {
+.register-container {
   display: flex;
   justify-content: center;
   width: 100%;
 }
-/* LoginForm.css */
-.access-granted {
-  color: green;
+
+.mb-4 {
+  margin-bottom: 0.1rem !important;
 }
 
-.access-denied {
-  color: red;
+#userType {
+  margin: 10px 0;
 }
