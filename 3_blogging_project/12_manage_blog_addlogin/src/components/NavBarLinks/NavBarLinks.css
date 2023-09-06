@@ -1,0 +1,5 @@
+/* NavBarLinks.css */
+.dropdown-menu.show {
+  display: flex;
+  left: -140px;
+}
