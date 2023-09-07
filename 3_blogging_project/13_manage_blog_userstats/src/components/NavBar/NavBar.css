@@ -1,3 +1,7 @@
+.container {
+  --bs-gutter-x: 1.5rem;
+}
+
 .dropdown-menu {
   max-height: 300px;
   overflow-y: auto;

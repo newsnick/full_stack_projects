@@ -6,7 +6,7 @@ import './LoginFormButton.css'
 const LoginFormButton = () => {
   return (
     <div className="loginContainer">
-      <Link className="btn btn-secondary m-2" to="/login">
+      <Link className="btn btn-secondary mb-5 mx-4" to="/login">
         Login
       </Link>
     </div>

@@ -20,7 +20,7 @@ function RegisterForm() {
   // Success message state
   const [successMessage, setSuccessMessage] = useState('')
 
-  //   // Function to convert userList to JSON and print to console
+  // Function to convert userList to JSON and print to console
   const printUserListToConsole = useCallback(() => {
     const userListJSON = JSON.stringify(userList, null, 2)
     console.log(userListJSON)
@@ -33,7 +33,6 @@ function RegisterForm() {
     printUserListToConsole()
   }, [userList, printUserListToConsole])
 
-  // Handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault()
     // Update the state with form data
@@ -48,7 +47,7 @@ function RegisterForm() {
 
     // Create an object to represent the user
     const user = {
-      id: userList.length + 1, // Generate a unique ID
+      id: userList.length + 1,
       name,
       username,
       email,

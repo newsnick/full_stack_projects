@@ -1,0 +1,44 @@
+.user-profile-container {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+}
+
+.user-icon {
+  width: 30px;
+  height: 30px;
+  background-color: #007bff; /* Set your desired background color */
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+}
+
+.user-data {
+  position: absolute;
+  top: 100%;
+  left: -75px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  display: none;
+}
+
+.user-profile-container.hovered .user-data {
+  display: block;
+}
+.logout-button {
+  background-color: #dc3545; /* Set your desired background color */
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.logout-button:hover {
+  background-color: #c82333; /* Change color on hover */
+}

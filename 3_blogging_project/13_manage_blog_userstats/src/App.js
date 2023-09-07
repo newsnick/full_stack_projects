@@ -1,7 +1,18 @@
-// updates:
-// App.js: 1. added routes for LoginForm, RegisterForm
+/**updates
+ * Redux Components:
+ - 'login' and 'logout' actions manage user authentication.
+ - 'auth' reducer stores the user's login state.
+ - These components enable user login/logout functionality.
+ *
+ * UserProfile Component:
+ - Displays user information and logout button.
+ - Provides a user-friendly interface for logged-in users.
+ - Appears as a pop-up when hovering over the user icon.
+ */
+
 // App.js
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 import './App.css'
@@ -23,8 +34,21 @@ import UpdateCourse from './components/UpdateCourse/UpdateCourse.jsx'
 import ArticlePage from './pages/ArticlePage/ArticlePage.jsx'
 import LoginForm from './components/LoginForm/LoginForm.jsx'
 import RegisterForm from './components/RegisterForm/RegisterForm.jsx'
+import UserProfile from './components/UserProfile/UserProfile.jsx'
 
 function App() {
+  const [loggedInUser, setLoggedInUser] = useState(null)
+
+  // Log the loggedInUser whenever it changes
+  useEffect(() => {
+    console.log('loggedInUser:', loggedInUser)
+  }, [loggedInUser])
+
+  //set the logged-in user
+  const handleLogin = (user) => {
+    setLoggedInUser(user)
+  }
+
   return (
     <BrowserRouter>
       <div className="App">
@@ -55,8 +79,18 @@ function App() {
               <Route path="/update-course" element={<UpdateCourse />} />
               <Route path="/articles/:articleId" element={<ArticlePage />} />
               <Route path="*" element={<NotFoundPage />} />
-              <Route path="/login" element={<LoginForm />} />
+              <Route
+                path="/login"
+                element={<LoginForm onLogin={handleLogin} />}
+              />
               <Route path="/register" element={<RegisterForm />} />
+              {/* Conditionally render UserProfile when loggedInUser is not null */}
+              {loggedInUser && (
+                <Route
+                  path="/user-profile"
+                  element={<UserProfile user={loggedInUser} />}
+                />
+              )}
             </Routes>
           </div>
         </FetchCourses>
