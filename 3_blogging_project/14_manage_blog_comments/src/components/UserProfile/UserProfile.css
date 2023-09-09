@@ -1,0 +1,109 @@
+/* .user-profile-container {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+}
+
+.user-icon {
+  width: 30px;
+  height: 30px;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+}
+
+.user-data {
+  position: absolute;
+  top: 100%;
+  left: -75px;
+  background-color: palegoldenrod;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  display: none;
+  font-size: 11px;
+  width: 165px;
+  text-align: left;
+  border-radius: 10px;
+  border: 4px solid black;
+}
+
+.user-profile-container.hovered .user-data {
+  display: block;
+}
+.logout-button {
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  padding: 2px 10px;
+  margin-top: 10px;
+  cursor: pointer;
+
+  border-radius: 5px;
+}
+
+.logout-button:hover {
+  background-color: #c82333;
+}
+
+.loggedUser {
+  margin: 3px;
+} */
+.user-profile-container {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+}
+
+.user-icon {
+  width: 30px;
+  height: 30px;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+}
+
+.user-data {
+  position: absolute;
+  top: 100%;
+  left: -75px;
+  background-color: palegoldenrod;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  opacity: 0; /* Start with opacity 0 */
+  font-size: 11px;
+  width: 165px;
+  text-align: left;
+  border-radius: 10px;
+  border: 4px solid black;
+  transition: opacity 0.3s ease-in-out; /* Apply the opacity transition */
+}
+
+.user-profile-container.hovered .user-data {
+  opacity: 10; /* Set opacity to 1 on hover */
+}
+
+.logout-button {
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  padding: 2px 10px;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.logout-button:hover {
+  background-color: #c82333;
+}
+
+.loggedUser {
+  margin: 3px;
+}

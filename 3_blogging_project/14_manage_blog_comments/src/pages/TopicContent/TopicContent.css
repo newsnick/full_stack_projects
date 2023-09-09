@@ -1,0 +1,40 @@
+/* .greenbox {
+  color: green;
+  border: 2px solid green;
+  border-radius: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 50px;
+} */
+
+.course-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 10px;
+  background-color: white;
+  /* border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+}
+
+.course-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: black;
+  margin-bottom: 10px;
+}
+
+/* .upvotes {
+  display: block;
+  color: #777;
+  margin-bottom: 20px;
+} */
+
+.course-content {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+}
+
+.content-box {
+  padding: 20px;
+}
