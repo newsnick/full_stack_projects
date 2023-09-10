@@ -1,5 +1,6 @@
 // AddComment.jsx
 import React, { useState } from 'react'
+import './AddComment.css'
 
 const AddComment = ({ addComment }) => {
   const [commentText, setCommentText] = useState('')
@@ -23,7 +24,9 @@ const AddComment = ({ addComment }) => {
         placeholder="Enter your comment"
         required
       />
-      <button type="submit">Post Comment</button>
+      <button className="commentButton" type="submit">
+        Post Comment
+      </button>
     </form>
   )
 }

@@ -1,13 +1,11 @@
-/**updates
- * Redux Components:
- - 'login' and 'logout' actions manage user authentication.
- - 'auth' reducer stores the user's login state.
- - These components enable user login/logout functionality.
- *
- * UserProfile Component:
- - Displays user information and logout button.
- - Provides a user-friendly interface for logged-in users.
- - Appears as a pop-up when hovering over the user icon.
+/**added:
+ * CommentButton.jsx - This component represents a button for adding comments. It handles the confirmation dialog for unauthenticated users.
+ * 1. State to control the display of the confirmation dialog.
+ * 2. Handler for clicking the comment button
+ * 3. Handlers for confirming "Yes" or "no" in the confirmation dialog
+ * AddComment.jsx - This component allows users to add comments to an article.
+ * 1. State to store the comment text
+ * 2. Handler for submitting a comment
  */
 
 // App.js

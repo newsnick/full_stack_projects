@@ -41,11 +41,7 @@ const NavBar = () => {
         <div className="collapse navbar-collapse" id="navbarNav">
           <NavBarLinks />
         </div>
-        {user ? (
-          <UserProfile user={user} /> // Render UserProfile if user is logged in
-        ) : (
-          <LoginFormButton /> // Render LoginFormButton if user is not logged in
-        )}
+        {user ? <UserProfile user={user} /> : <LoginFormButton />}
       </div>
     </nav>
   )
