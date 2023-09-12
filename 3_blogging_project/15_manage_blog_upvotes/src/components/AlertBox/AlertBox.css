@@ -1,0 +1,50 @@
+.confirm-dialog {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.confirm-dialog-box {
+  background-color: white;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.confirm-dialog-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 15px;
+}
+
+.confirm-dialog-button {
+  padding: 10px 20px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+}
+
+.confirm-dialog-button-yes {
+  background-color: blue;
+  color: white;
+  font-size: initial;
+}
+
+.confirm-dialog-button-no {
+  background-color: #ccc;
+  color: #333;
+}
+.confirm-dialog-button-yes,
+.confirm-dialog-button-no {
+  width: 100px;
+  padding: 0;
+}

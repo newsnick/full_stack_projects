@@ -1,0 +1,28 @@
+.login-form {
+  position: absolute;
+  padding: 30px 90px 30px 90px;
+  background-color: skyblue;
+  border-radius: 10px;
+  outline: none;
+  width: 500px;
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+/* LoginForm.css */
+.access-granted {
+  color: green;
+}
+
+.access-denied {
+  color: red;
+}
+
+.form-header,
+.form-label {
+  color: #666;
+  font-weight: 500;
+}

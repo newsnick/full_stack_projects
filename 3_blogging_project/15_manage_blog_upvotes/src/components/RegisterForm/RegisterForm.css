@@ -1,0 +1,30 @@
+a.back-button {
+  text-decoration: none;
+}
+
+hr {
+  margin: 0.5rem 0;
+}
+
+.register-form {
+  position: absolute;
+  padding: 30px 90px 30px 90px;
+  background-color: skyblue;
+  border-radius: 10px;
+  outline: none;
+  width: 500px;
+}
+
+.register-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.mb-4 {
+  margin-bottom: 0.1rem !important;
+}
+
+#userType {
+  margin: 10px 0;
+}

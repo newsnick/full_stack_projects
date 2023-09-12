@@ -1,0 +1,19 @@
+/* a.article-list-item {
+  text-decoration: none;
+  color: black;
+} */
+
+.listing-box {
+  margin: 0px;
+  padding: 25px;
+  padding-top: 25px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background: steelblue;
+  z-index: 3;
+  position: relative;
+}
+
+.article-list-item:hover {
+  background-color: ghostwhite;
+}
